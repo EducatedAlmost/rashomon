@@ -1,18 +1,18 @@
-#+TITLE: ae/Rashomon
+* ae/Rashomon
 
 Rashomon constructs a datastructure from a collection of events.
 
 It offers a solution similar to multimethods but based on structure and functions, without special forms.
 
-* The name
+** The name
 
 The term /[[https://en.wikipedia.org/wiki/Rashomon_effect][Rashomon effect]]/ is used to describe the situation when multiple observers have different, and often contradictory, interpretations of the same event. It is named for Kurosawa's classic 1950 film /[[https://en.wikipedia.org/wiki/Rashomon][Rashomon]]/, where four witnesses to a man's murder offer contradictory statements at the subsequent trial.
 
-** Terminology
+*** Terminology
 
 Rashomon uses the word ~perspective~ for the function associated with an event, and the word ~testimony~ to describe the datastructure produced by rebuilding — in homage to its eponym.
 
-* Usage
+** Usage
 
 Invoke a function from the command line:
 #+begin_src bash
@@ -81,16 +81,16 @@ The initial event must be applicable to a nil testimony if one is to call ~ae.ra
 
 The collection of events that is passed to ~apply-events~ and ~build~ doesn't have to be be a list, a set works just as well as long as the order the events are applied is irrelevant. The collection will be used with ~reduce~, so as long as it works with that it will be fine.
 
-* Comparison to multimethods
+** Comparison to multimethods
 
 TODO
 
-* Specs
+** Specs
 
 See [[file:src/ae/rashomon/specs.clj]] for specs describing the structures used in Rashomon. If you are unfamiliar with Clojure Spec, [[file:test/ae/rashomon/specs_test.clj]] shows examples of the structures themselves.
 
-* Future
+** Future
 
-** Use custom event-type key
+*** Use custom event-type key
 
 All Rashomon functions should allow a custom ~event-type~ key as an optional final argument so that one can use events and perspectives that use the the user's key, instead of ~:ae.rashomon.event/type~.
