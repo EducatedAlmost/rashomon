@@ -6,7 +6,7 @@ It offers a solution similar to multimethods but based on structure and function
 
 * The name
 
-The term /Rashomon effect/ is used to describe the situation when multiple observers have different, and often contradictory, interpretations of the same event. It is named for Kurosawa's classic 1950 film /Rashomon/, where four witnesses to a man's murder offer contradictory statements at the subsequent trial.
+The term /[[https://en.wikipedia.org/wiki/Rashomon_effect][Rashomon effect]]/ is used to describe the situation when multiple observers have different, and often contradictory, interpretations of the same event. It is named for Kurosawa's classic 1950 film /[[https://en.wikipedia.org/wiki/Rashomon][Rashomon]]/, where four witnesses to a man's murder offer contradictory statements at the subsequent trial.
 
 ** Terminology
 
