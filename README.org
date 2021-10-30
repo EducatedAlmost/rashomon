@@ -1,4 +1,4 @@
-* ae/Rashomon
+* æ/Rashomon
 
 Rashomon constructs a datastructure from a collection of events.
 
