@@ -20,6 +20,15 @@
           persps {:foo f}
           expected 70
           actual (apply-event testimony persps event)]
+      (is (= expected actual))))
+
+  (testing "A single event can be applied with a custom type key."
+    (let [testimony 40
+          event {:foo.event-type :foo :value 30}
+          f (fn [t e] (+ t (:value e)))
+          persps {:foo f}
+          expected 70
+          actual (apply-event testimony persps event :foo.event-type)]
       (is (= expected actual)))))
 
 (deftest apply-events-test
@@ -43,11 +52,11 @@
           actual (build persps [e1 e2])]
       (is (= expected actual))))
 
-  #_(testing "Testimonies can be built from nil whilst specifying a custom event-type key."
-      (let [e1 {:event-type :foo :value 30}
-            e2 {:event-type :foo :value 20}
-            f (fn [t e] (+ (or t 0) (:value e)))
-            persps {:foo f}
-            expected 50
-            actual (build persps [e1 e2] :event-type)]
-        (is (= expected actual)))))
+  (testing "Testimonies can be built from nil whilst specifying a custom event-type key."
+    (let [e1 {:foo.event-type :foo :value 30}
+          e2 {:foo.event-type :foo :value 20}
+          f (fn [t e] (+ (or t 0) (:value e)))
+          persps {:foo f}
+          expected 50
+          actual (build persps [e1 e2] :foo.event-type)]
+      (is (= expected actual)))))
