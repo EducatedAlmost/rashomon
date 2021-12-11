@@ -1,5 +1,7 @@
 * æ/Rashomon
 
+Read the blog post: https://blog.almost.education/posts/rashomon
+
 Rashomon constructs a datastructure from a collection of events.
 
 It provides the basic functions that are needed to perform event-sourcing, an approach that, instead of storing state, rebuilds state from a collection of past events. It offers a solution similar to multimethods but based on Clojure datastructures and functions, and without special forms.
